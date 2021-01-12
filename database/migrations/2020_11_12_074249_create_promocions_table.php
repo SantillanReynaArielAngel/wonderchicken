@@ -28,9 +28,9 @@ class CreatePromocionsTable extends Migration
             $table->foreignId('articulo_id')->constrained()
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->foreignId('presa_id')->constrained()
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            // $table->foreignId('presa_id')->constrained()
+            //     ->onDelete('cascade')
+            //     ->onUpdate('cascade');
             $table->foreignId('regalo_id')->constrained()
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
