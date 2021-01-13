@@ -18,7 +18,7 @@ class CreateEmpresasTable extends Migration
             $table->string('nombre');       //Wonder Chicken
             $table->string('direccion');        // Av.  de las americas
             $table->integer('numero_domicilio');    //317
-            $tanle->string('propietario'); //Erick Antonio Hurtado Zardan
+            $table->string('propietario'); //Erick Antonio Hurtado Zardan
             $table->string('telefono')->nullable();
             $table->string('cuenta_bancaria')->nullable();      // para reaizar los pagos online.
             $table->string('logotipo')->nullable();     //imagen
