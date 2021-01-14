@@ -15,7 +15,7 @@ class CreatePlatosTable extends Migration
     {
         Schema::create('platos', function (Blueprint $table) {
             $table->id();
-            $table->string('categoria')->nullable();
+            $table->string('categoria')->nullable();    //ejemplo: spiedo,broaster,plancha
 
             $table->timestamps();
             $table->foreignId('articulo_id')->constrained()

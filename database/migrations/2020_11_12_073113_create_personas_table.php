@@ -19,7 +19,7 @@ class CreatePersonasTable extends Migration
             $table->string('nombre');
             $table->string('ap_paterno');
             $table->string('ap_materno');
-            $table->integer('celular')->unique()->unsigned(); //PREGUNTA: tendremos que colocar nullable()???
+            $table->integer('celular')->unique()->unsigned()->nullable(); //PREGUNTA: tendremos que colocar nullable()???
             $table->string('direccion');
             $table->string('numero_domicilio')->nullable(); //string por que se tiene casos como  236-A
 

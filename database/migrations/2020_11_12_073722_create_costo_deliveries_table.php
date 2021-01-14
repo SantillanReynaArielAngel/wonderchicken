@@ -16,15 +16,12 @@ class CreateCostoDeliveriesTable extends Migration
         Schema::create('costo_deliveries', function (Blueprint $table) {
             $table->id();
             $table->string('empresa');
-            $table->string('direccion');
             $table->string('zona');
             $table->double('km',2,2);
             $table->double('precio',2,2);
 
             $table->timestamps();
-            $table->foreignId('pedido_id')->constrained()
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+
 
         });
     }

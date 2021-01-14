@@ -16,19 +16,17 @@ class CreatePromocionsTable extends Migration
         Schema::create('promocions', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->text('descripcion');
-            $table->double('precio');
-            $table->integer('cantidad');
-            $table->string('imagen');
+            $table->text('descripcion')->nullable();
+            $table->double('precio')->unsigned();
+            $table->integer('cantidad')->unsigned();
+            $table->string('imagen')->nullable();
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
-            $table->boolean('estado')->default(true);
+            $table->boolean('estado')->default(true);   //1=disponible 0=agotado otra opcion $table->enum('estado',['disponible','agotado'])
             
             $table->timestamps();
-            $table->foreignId('articulo_id')->constrained()
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-            // $table->foreignId('presa_id')->constrained()
+            
+            // // $table->foreignId('presa_id')->constrained()
             //     ->onDelete('cascade')
             //     ->onUpdate('cascade');
             $table->foreignId('regalo_id')->constrained()

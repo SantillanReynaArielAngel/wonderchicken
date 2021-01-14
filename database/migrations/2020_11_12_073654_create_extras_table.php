@@ -15,7 +15,7 @@ class CreateExtrasTable extends Migration
     {
         Schema::create('extras', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo')->nullable();
+            $table->string('tipo')->nullable(); // Pregunta: es necesario este campo?
 
             $table->timestamps();
             $table->foreignId('articulo_id')->constrained()

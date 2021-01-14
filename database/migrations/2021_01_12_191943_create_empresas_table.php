@@ -23,7 +23,7 @@ class CreateEmpresasTable extends Migration
             $table->string('cuenta_bancaria')->nullable();      // para reaizar los pagos online.
             $table->string('logotipo')->nullable();     //imagen
             $table->string('latitud');      // -19.044470222559507 
-            $table->string('longuitud');    // -65.24537198842745
+            $table->string('longitud');    // -65.24537198842745
             $table->enum('estado',['abierto','cerrado']); //2 tipos
 
             $table->unsignedBigInteger('nit_emisor'); //o bigInteger. 5640971015
