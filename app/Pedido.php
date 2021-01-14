@@ -30,10 +30,11 @@ class Pedido extends Model
         return $this->hasMany('App\DetallePedido');
     }
 
-    //RELACION NORMAL 1 A N
-    public function costodeliverys()
-    {
-        return $this->hasMany('App\CostoDelivery');
-    }
+
+     //RELACION NORMAL INVERSA 1 A N
+     public function ubicacion()
+     {
+         return $this->belongsTo('App\Ubicacion');
+     }
     //use HasFactory;
 }

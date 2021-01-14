@@ -13,15 +13,15 @@ class Articulo extends Model
     }
 
     //RELACION NORMAL 1 A N
-    public function promociones()
-    {
-        return $this->hasMany('App\Promocion');
-    }
-
-    //RELACION NORMAL 1 A N
     public function detallepedidos()
     {
         return $this->hasMany('App\DetallePedido');
+    }
+
+    //RELACION NORMAL INVERSA N A N 
+    public function promociones()
+    {
+        return $this->belongsToMany('App\Promocion');
     }
     //use HasFactory;
 }

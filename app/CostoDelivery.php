@@ -6,10 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class CostoDelivery extends Model
 {
-    //RELACION NORMAL INVERSA 1 A N
-    public function pedido()
-    {
-        return $this->belongsTo('App\Pedido');
-    }
+
+     //RELACION NORMAL 1 A N
+     public function ubicacions()
+     {
+         return $this->hasMany('App\Ubicacion');
+     }
+
+    
     //use HasFactory;
 }

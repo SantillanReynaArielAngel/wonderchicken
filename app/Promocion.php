@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Promocion extends Model
 {
     //RELACION NORMAL INVERSO 1 A N 
-    public function presa()
-    {
-        return $this->belongsTo('App\Presa');
-    }
+    // public function presa()
+    // {
+    //     return $this->belongsTo('App\Presa');
+    // }
 
     //RELACION NORMAL INVERSO 1 A N 
     public function regalo()
@@ -24,10 +24,13 @@ class Promocion extends Model
         return $this->hasMany('App\DetallePedido');
     }
 
-    //RELACION NORMAL INVERSO 1 A N
-    public function articulo()
+
+    //RELACION NORMAL N A N
+    public function articulos()
     {
-        return $this->belongsTo('App\Articulo');
+        return $this->belongsToMany('App\Articulo');
     }
+
+
    // use HasFactory;
 }

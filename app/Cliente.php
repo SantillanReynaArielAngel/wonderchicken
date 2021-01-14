@@ -7,12 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {   
     //RELACION NORMAL 1 A N
-    public function ubicaciones()
-    {
-        return $this->hasMany('App\Ubicacion');
-    }
-
-    //RELACION NORMAL 1 A N
     public function pedidos()
     {
         return $this->hasMany('App\Pedido');
