@@ -12,4 +12,5 @@ class Presa extends Model
     //     return $this->hasMany('App\Promocion');
     // }
     //use HasFactory;
+    
 }
