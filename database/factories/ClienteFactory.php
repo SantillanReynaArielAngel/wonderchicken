@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Cliente::class, function (Faker $faker) {
     return [
-        'nit'       => $faker->unique()->randomNumber(),
+        'nit'       => (string) $faker->unique()->randomNumber(),
         'correo'    => $faker->unique()->safeEmail,
     ];
 });

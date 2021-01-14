@@ -19,9 +19,12 @@ class CreatePersonasTable extends Migration
             $table->string('nombre');
             $table->string('ap_paterno');
             $table->string('ap_materno');
-            $table->integer('celular')->unique()->unsigned()->nullable(); //PREGUNTA: tendremos que colocar nullable()???
+            $table->enum('sexo', ['hombre', 'mujer']);
+            $table->date('fecha_nacimiento');
+            $table->string('celular')->unique()->nullable(); //PREGUNTA: tendremos que colocar nullable()???
             $table->string('direccion');
             $table->string('numero_domicilio')->nullable(); //string por que se tiene casos como  236-A
+            $table->string('foto')->unique()->nullable();
 
             $table->morphs('personaable'); //parametro= minuscula_nombre_modelo(tabla)+"able". Creara las columnas parametro_id y parametro_type
 

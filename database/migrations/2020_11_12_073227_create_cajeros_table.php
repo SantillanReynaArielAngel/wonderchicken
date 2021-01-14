@@ -15,9 +15,6 @@ class CreateCajerosTable extends Migration
     {
         Schema::create('cajeros', function (Blueprint $table) {
             $table->id();
-            $table->integer('edad')->unsigned();
-            $table->enum('sexo', ['hombre', 'mujer']);
-            $table->string('foto')->unique()->nullable();
             $table->enum('turno', ['mañana', 'tarde']); //Pregunta: estaba bien colocar la ñ?
 
             $table->timestamps();

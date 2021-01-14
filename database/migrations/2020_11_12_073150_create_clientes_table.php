@@ -15,7 +15,8 @@ class CreateClientesTable extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('nit')->unique()->unsigned()->nullable();
+            //$table->unsignedBigInteger('nit')->unique()->unsigned()->nullable();
+            $table->string('nit')->unique()->nullable();
             $table->string('correo')->unique()->nullable(); //Pregunta: esta bien nullable()?
 
             $table->timestamps();

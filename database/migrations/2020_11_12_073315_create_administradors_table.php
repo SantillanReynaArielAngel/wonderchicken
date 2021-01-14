@@ -15,8 +15,6 @@ class CreateAdministradorsTable extends Migration
     {
         Schema::create('administradors', function (Blueprint $table) {
             $table->id();
-            $table->enum('sexo', ['hombre', 'mujer']);
-            $table->string('foto')->unique()->nullable();
 
             $table->timestamps();
         });
