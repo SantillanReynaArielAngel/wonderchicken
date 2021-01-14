@@ -29,7 +29,7 @@ class EmpresaSeeder extends Seeder
             'cufd'=>'',
             'codigo_sucursal'=>1,
             'leyenda'=>'Donde Mucho Nunca Es Suficiente',
-            'actividad_economica'=>'',
+            'actividad_economica'=>'Servicios',
         ]);
         //
     }
