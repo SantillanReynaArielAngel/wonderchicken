@@ -17,6 +17,5 @@ class Cajero extends Model
     {
         return $this->morphOne('App\Persona', 'personaable');
     }
-    
     //use HasFactory;
 }

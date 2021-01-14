@@ -19,11 +19,6 @@ class CreateClientesTable extends Migration
             $table->string('correo')->unique()->nullable(); //Pregunta: esta bien nullable()?
 
             $table->timestamps();
-
-            $table->foreignId('persona_id')->constrained()
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-
         });
     }
 

@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Cliente extends Model
-{   
+{
     //RELACION NORMAL 1 A N
     public function pedidos()
     {
