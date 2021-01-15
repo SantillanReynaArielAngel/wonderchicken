@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Plato::class, function (Faker $faker) {
     return [
-        'categoria'=>$faker->optional()->randomElement($array = array ('broaster')),
+        'categoria' => $faker->randomElement($array = array('broaster')),
         // 'categoria'=>'Broaster'->optional(),
     ];
 });

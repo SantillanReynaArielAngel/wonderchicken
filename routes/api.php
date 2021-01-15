@@ -25,3 +25,6 @@ Route::post('personas', 'PersonaController@store'); // crear un nuevo usuario ->
 // Route::patch('personas/{id}');
 Route::put('personas/{id}'); // actualizar -> U
 Route::delete('personas/{id}'); // eliminar un usuario -> D
+
+// CLIENTE
+Route::post('clientes/{cliente}/pedidos', 'Cliente\ClientePedidoController@store');

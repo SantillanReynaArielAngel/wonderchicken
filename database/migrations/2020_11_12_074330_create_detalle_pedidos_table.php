@@ -15,8 +15,9 @@ class CreateDetallePedidosTable extends Migration
     {
         Schema::create('detalle_pedidos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('promocion_id')->nullable();
             $table->integer('cantidad');
-            
+
             $table->timestamps();
             $table->foreignId('pedido_id')->constrained()
                 ->onDelete('cascade')
@@ -24,9 +25,12 @@ class CreateDetallePedidosTable extends Migration
             $table->foreignId('articulo_id')->constrained()
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->foreignId('promocion_id')->constrained()
+            $table->foreign('promocion_id')->references('id')->on('promocions')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+            // $table->foreignId('promocion_id')->constrained()
+            //     ->onDelete('cascade')
+            //     ->onUpdate('cascade');
         });
     }
 

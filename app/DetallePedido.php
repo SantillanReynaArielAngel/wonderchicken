@@ -6,12 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class DetallePedido extends Model
 {
+    protected $fillable = [
+        'cantidad', 'pedido_id', 'articulo_id', 'promocion_id',
+    ];
     //RELACION NORMAL INVERSO 1 A N
     public function promocion()
     {
         return $this->belongsTo('App\Promocion');
     }
-    
+
     //RELACION NORMAL INVERSA 1 A N 
     public function pedido()
     {
