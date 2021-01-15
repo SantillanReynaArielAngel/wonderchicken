@@ -15,13 +15,10 @@ class CreateBebidasTable extends Migration
     {
         Schema::create('bebidas', function (Blueprint $table) {
             $table->id();
-            $table->string('sabor')->unique();
+            $table->string('sabor');    //->unique();
             
             $table->timestamps();
-            $table->foreignId('articulo_id')->constrained()
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-
+            
         });
     }
 

@@ -17,8 +17,8 @@ class CreateCostoDeliveriesTable extends Migration
             $table->id();
             $table->string('empresa');
             $table->string('zona');
-            $table->double('km',2,2);
-            $table->double('precio',2,2);
+            $table->integer('km');//$table->double('km',2,2);
+            $table->double('precio')->unsigned();//('precio',2,2)
 
             $table->timestamps();
 

@@ -18,9 +18,7 @@ class CreateExtrasTable extends Migration
             $table->string('tipo')->nullable(); // Pregunta: es necesario este campo?
 
             $table->timestamps();
-            $table->foreignId('articulo_id')->constrained()
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            
         });
     }
 

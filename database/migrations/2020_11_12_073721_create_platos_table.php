@@ -18,9 +18,7 @@ class CreatePlatosTable extends Migration
             $table->string('categoria')->nullable();    //ejemplo: spiedo,broaster,plancha
 
             $table->timestamps();
-            $table->foreignId('articulo_id')->constrained()
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            
         });
     }
 
